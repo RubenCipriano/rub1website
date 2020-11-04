@@ -43,4 +43,4 @@ app.post('/contact', (req,res) => {
     res.redirect('/')
 })
 
-app.listen(80 || process.env.PORT)
+app.listen(process.env.PORT || 80)
