@@ -1,0 +1,257 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+* {
+    transition: 1s;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth
+}
+
+nav {
+    overflow: hidden;
+    background-color: rgb(175, 0, 0);
+}
+
+nav a {
+    float: left;
+    color: white;
+    padding: 20px;
+    margin-left: 25px;
+}
+
+nav > img {
+    float: left;
+    border-radius: 50px;
+    width: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+nav > img:hover {
+    transform: rotateY(360deg);
+}
+
+nav > a:hover {
+    color: black;
+}
+
+.rubi-color {
+    background-color: red;
+    color: white;
+    padding: 0.5vh;
+}
+
+#banner {
+    background-color: rgb(255, 25, 25);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#banner > img {
+    position: absolute;
+    border-radius: 50px;
+    width: 12.5vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: ScaleUp 10s infinite;
+}
+
+@keyframes ScaleUp {
+    0% { transform: scale(1);}
+    50% { transform: scale(2);}
+    100% { transform: scale(1);}
+}
+
+#arrowDown {
+    text-align: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+    right: 0;
+    color: white;
+    animation: DownUpAnimation 5s infinite;
+    font-size: 7.5vh;
+}
+
+@keyframes DownUpAnimation{
+    0% {transform: translateY(10px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(10px);}
+}
+
+#about {
+    display: block;
+    overflow: auto;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    padding: 7.5%;
+}
+
+#about > h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+}
+
+.talk {
+    width: 100%;
+    text-align: center;
+    height: inherit;
+}
+
+.talk > * {
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+}
+
+#livestream {
+    background-color: purple;
+    height: auto;
+    color: white !important;
+    padding-bottom: 7.5%;
+}
+
+#livestream > h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+    font-family: twitchFam;
+}
+
+@font-face  {
+    font-family: twitchFam;
+    src: url('/font/Twitch.ttf')
+}
+
+.liverubi {
+    height: 75%;
+    width: 50%;
+    display:block;
+    margin: auto;
+}
+
+.table {
+    z-index: 99;
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    display: table;
+    right: 0;
+  }
+  
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .dots {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+  }
+
+  .dots li a:hover {
+      transform: scale(1.2);
+  }
+
+  .active {
+    border: 3px solid white;
+    border-radius: 50px;
+  }
+  .dots li {
+    position: relative;
+    display: block; 
+    margin: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .dots li a {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    text-indent: -999em;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    background-color: rgb(53, 53, 53);
+    border: none;
+    box-shadow: inset 0 0 0 2px white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.dots .active a:after {
+    height: 100%;
+  }
+
+.dots li a:after {
+    content: '';
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 1px #fff;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+
+#contact {
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: black !important;
+}
+
+#contact > h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+    color: white
+}
+
+#contact > form {
+    position: relative;;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 7.5%;
+    left: 0;
+    right: 0;
+    top: 50%;
+}
+
+#contact > form > * {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+textarea {
+    text-align: left !important;
+    resize: none;
+}

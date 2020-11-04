@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+        <link href="/css/home.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="/js/changeParent.js"></script>
+    </head>
+    <body onload="StreamAdd()">
+        <div class="table">
+            <div class="cell">
+              <ul class="dots">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#livestream">Livestream</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        <div id="banner">
+            <img id="logoBanner" class="banner-img" src="https://cdn.discordapp.com/app-icons/551825154108293140/23a60ada69f2be8804fc6b721553a10a.png?size=512">
+            <i id="arrowDown" class="fa fa-chevron-down fa-3x"></i>
+        </div>
+        <div id="about">
+            <h1 id="about-me" data-aos="zoom-in">ABOUT <span class="rubi-color">ME</span></h1>
+            <section class="talk" data-aos="zoom-in">
+                <h2>Hi, I'm Rub1</h2>
+                <p>And I'm studying on ISTEC a university in Portugal, I make many side projects like this one for example where I use node js and some HTML / CSS to present this page to you</p>
+            </section>
+        </div>
+        <div id="livestream">
+            <h1 data-aos="zoom-in">Livestream</h1>
+            <iframe class="liverubi" data-aos="zoom-in"></iframe>
+        </div>
+        <div id="contact">
+            <h1 data-aos="zoom-in">CONTACT <span class="rubi-color">ME</span></h1>
+            <form method="POST" action="/contact" data-aos="zoom-in">
+                <input type="text" placeholder="Name" name="Name">
+                <input type="text" placeholder="Subject" name="Subject">
+                <textarea placeholder="Message" name="Message"></textarea>
+                <button>Send Message</button>
+            </form>
+        </div>
+    </body>
+</html>
